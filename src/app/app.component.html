@@ -1,0 +1,64 @@
+<h1>Angular Application</h1>
+<br/>
+<h2>Use of Custom Directive named appInputFormat</h2>
+<input type="text" [appInputformat] = "'uppercase'" />
+<br/>
+<br/>
+<navigation></navigation>
+<br/>
+<h1>Display the Courses present using Hidden and ngIf directive</h1>
+<div *ngIf = "courseForDirective.length > 0 ; then courses else noCourses" > </div>
+  <ng-template #courses> Course Are Present </ng-template>
+  <ng-template #noCourses>No Courses are Present </ng-template>
+
+
+  <div>
+    <div [hidden] = "courseForDirective.length == 0">Course are present using hidden</div>
+    <div [hidden] = "courseForDirective.length > 0">No Courses</div>
+  </div>
+
+<br/>
+<br/>
+<h1>TrackBY for ngFor directive</h1>
+
+<button class="btn btn-primary" (click) = "loadCourses()">Load Courses</button>
+<ul>
+  <li *ngFor = "let course of coursesForTrack; trackBy : onTrackBy">
+    {{course.name}}
+  </li>
+</ul>
+<br/>
+<likes [isLiked] = "likes.isLiked" [likesCount] = "likes.likesCount"></likes>
+<br/>
+<bootstrap-panel>
+<!-- <div class="heading">Heading</div> -->
+<ng-container class="heading">Heading</ng-container>
+<div class="body">
+  <h1>Body</h1>
+  <p>Content of the body goes here...</p>
+</div>
+</bootstrap-panel>
+
+<br/>
+<br/>
+<courses></courses>
+<br/>
+<favourite [isFavourite] = "post.isFavourite" (change) = "onFavouriteChanged($event)"></favourite>
+<br/>
+<title-casing></title-casing>
+<br/>
+<br/>
+<contact-form></contact-form>
+<br/>
+<br/>
+<udemycourseform></udemycourseform>
+<br/>
+<br/>
+<signup-form></signup-form>
+<br/>
+<br/>
+<new-form-to-add-topics></new-form-to-add-topics>
+<br/>
+<br/>
+<post></post>
+

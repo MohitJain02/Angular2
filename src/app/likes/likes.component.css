@@ -1,0 +1,10 @@
+.glyphicon
+{
+    cursor: pointer;
+    color : #ccc
+}
+
+.isHighlighted
+{
+    color: deeppink;
+}
